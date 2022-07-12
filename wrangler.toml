@@ -1,0 +1,18 @@
+name = "bradbot"
+account_id = ""
+workers_dev = true
+route = "bot.bradbot.io/*"
+
+compatibility_date = "2022-03-06"
+
+main = "./dist/index.mjs"
+
+[build]
+command = "npm install && npm test && npm run build"
+
+# [durable_objects]
+# bindings = [{name = "COUNTER", class_name = "CounterTs"}]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = []
